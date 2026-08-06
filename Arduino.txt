@@ -1,0 +1,24 @@
+const int pinos[6]  = {2, 3, 4, 5, 6, 7};
+char      teclas[6] = {'w', 's', 'a', 'd', 'f', 'q'};
+bool      estado[6] = {false, false, false, false, false, false};
+
+void setup() {
+  for (int i = 0; i < 6; i++)
+    pinMode(pinos[i], INPUT_PULLUP);
+  Serial.begin(9600);
+  Serial.println("PRONTO");
+}
+
+void loop() {
+  for (int i = 0; i < 6; i++) {
+    bool pressed = (digitalRead(pinos[i]) == LOW);
+    if (pressed != estado[i]) {
+      estado[i] = pressed;
+      if (pressed)
+        Serial.println(String("P:") + teclas[i]);
+      else
+        Serial.println(String("R:") + teclas[i]);
+    }
+  }
+  delay(15);
+}
