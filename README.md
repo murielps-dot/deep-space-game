@@ -163,9 +163,17 @@ To terminate the controller, press `CTRL + C` in the terminal.
 
 The project was developed and presented as part of an academic game fair, combining programming, electronics, and interactive game development.
 
-## ![Gameplay](Assets/Screenshots/gameplay.png) 
-## ![photo](Assets/Screenshots/gameplay.png)
-## ![menu](Assets/Screenshots/gameplay.png)
+### Menu Principal
+
+![Menu Principal](Assets/Screenshots/Menu.png)
+
+### Gameplay
+
+![Gameplay](Assets/Screenshots/Gameplay.png)
+
+### Foto
+
+![Foto](Assets/Screenshots/Photo.png)
 
 ## License
 
