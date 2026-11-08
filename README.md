@@ -168,6 +168,5 @@ The project was developed and presented as part of an academic game fair, combin
 ## ![menu](Assets/Screenshots/gameplay.png)
 
 ## License
-## License
 
 This project is licensed under the [MIT License](LICENSE).
