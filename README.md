@@ -52,7 +52,10 @@ The physical controller communicates with the game through the following keyboar
 
 ### Game
 
-- [Add the programming languages, frameworks, or game engines used]
+- ### Game
+- HTML5
+- CSS3
+- JavaScript
 
 ### Hardware
 
