@@ -64,7 +64,7 @@ The physical controller communicates with the game through the following keyboar
 - USB Serial Communication
 
 ### Software
-
+- C++
 - Python
 - PySerial
 - PyAutoGUI
