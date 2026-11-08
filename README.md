@@ -1,3 +1,4 @@
+[🇧🇷 Português](README.pt-BR.md) | [🇺🇸 English](README.md)
 # Deep Space Navigation
 
 **A browser-based game developed for the IFSC Game Fair 2026.**
