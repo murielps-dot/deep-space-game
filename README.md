@@ -163,7 +163,7 @@ To terminate the controller, press `CTRL + C` in the terminal.
 
 The project was developed and presented as part of an academic game fair, combining programming, electronics, and interactive game development.
 
-### Menu Principal
+### Main Menu
 
 ![Menu Principal](Assets/Screenshots/Menu.png)
 
@@ -171,7 +171,7 @@ The project was developed and presented as part of an academic game fair, combin
 
 ![Gameplay](Assets/Screenshots/Gameplay.png)
 
-### Foto
+### Photo
 
 ![Foto](Assets/Screenshots/Photo.png)
 
