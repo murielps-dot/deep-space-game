@@ -1,6 +1,5 @@
 [🇧🇷 Português](README.pt-BR.md) | [🇺🇸 English](README.md)
 
-# Deep Space Navigation
 
 # Deep Space Navigation
 
