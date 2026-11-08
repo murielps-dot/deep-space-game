@@ -1,0 +1,180 @@
+# Deep Space Navigation
+
+**Um jogo para navegador desenvolvido para a Feira de Jogos do IFSC 2026.**
+
+Deep Space Navigation é um projeto de jogo desenvolvido para a Feira de Jogos 2026 do Instituto Federal de Santa Catarina (IFSC).
+
+O projeto combina jogabilidade em navegador com um controle físico personalizado, construído utilizando Arduino e Python, proporcionando uma forma alternativa de interação com o jogo.
+
+[English](README.md) | **Português**
+
+---
+
+## Sobre o Projeto
+
+### História
+
+O futuro da humanidade está ameaçado. Após séculos de destruição ambiental provocada pela própria atividade humana, a Terra tornou-se cada vez mais hostil à vida, colocando em risco a sobrevivência da civilização.
+
+Diante de um futuro incerto, um astronauta é enviado em uma missão pelo espaço profundo com um objetivo fundamental: explorar o desconhecido e encontrar novas fontes de vida que possam oferecer à humanidade uma oportunidade de sobrevivência.
+
+Em Deep Space Navigation, o jogador assume o papel desse astronauta, embarcando em uma jornada pela imensidão do espaço em busca de esperança para o futuro da humanidade.
+
+### Visão Geral
+
+O projeto foi apresentado ao público durante a Feira de Jogos do IFSC 2026, reunindo desenvolvimento de jogos, programação, eletrônica e entretenimento interativo.
+
+## Funcionalidades
+
+- Jogo executado diretamente no navegador.
+- Controle físico personalizado utilizando Arduino.
+- Comunicação serial entre Arduino e Python.
+- Simulação de comandos do teclado utilizando PyAutoGUI.
+- Seis botões físicos para interação.
+- Integração entre hardware e software.
+
+## Controles
+
+O controle físico se comunica com o jogo por meio dos seguintes comandos do teclado:
+
+| Tecla | Ação |
+|:---:|---|
+| `W` | Mover para cima |
+| `S` | Mover para baixo |
+| `A` | Mover para a esquerda |
+| `D` | Mover para a direita |
+| `F` | Tirar foto |
+| `Q` | Iniciar |
+
+*Os comandos apresentados correspondem às configurações implementadas no software do controle.*
+
+## Tecnologias Utilizadas
+
+### Jogo
+
+- [Adicione as linguagens de programação, frameworks ou engines utilizados]
+
+### Hardware
+
+- Arduino
+- Botões físicos
+- Comunicação serial USB
+
+### Software
+
+- Python
+- PySerial
+- PyAutoGUI
+- Arduino IDE
+
+## Funcionamento do Controle
+
+O projeto utiliza um controle físico conectado a uma placa Arduino. O Arduino monitora seis entradas digitais e envia os eventos dos botões por meio da comunicação serial USB.
+
+Um script desenvolvido em Python recebe esses eventos e os converte em comandos do teclado, permitindo que o jogo no navegador reconheça os comandos enviados pelo controle físico.
+
+### Fluxo de Comunicação
+
+```text
+Botões Físicos
+      |
+      v
+   Arduino
+      |
+      | Comunicação Serial (9600 baud)
+      v
+Controlador Python
+      |
+      | PyAutoGUI
+      v
+Jogo no Navegador
+```
+
+### Arduino
+
+O firmware do Arduino monitora os pinos digitais de 2 a 7 utilizando a configuração `INPUT_PULLUP`.
+
+Quando um botão é pressionado ou solto, o Arduino envia uma mensagem correspondente pela comunicação serial:
+
+- `P:<tecla>` — Tecla pressionada.
+- `R:<tecla>` — Tecla solta.
+
+### Controlador Python
+
+O script em Python realiza as seguintes operações:
+
+1. Procura automaticamente a porta serial do Arduino conectado.
+2. Estabelece a comunicação com velocidade de 9600 baud.
+3. Recebe e interpreta os comandos enviados pelo Arduino.
+4. Simula o pressionamento e a liberação das teclas utilizando PyAutoGUI.
+5. Libera todas as teclas ao encerrar o programa.
+
+## Como Executar o Projeto
+
+### Requisitos
+
+- Python 3
+- Placa Arduino
+- Arduino IDE
+- Seis botões físicos
+- Navegador atualizado
+
+### 1. Instalar as Dependências
+
+Instale as bibliotecas necessárias utilizando o terminal:
+
+```bash
+pip install pyserial pyautogui
+```
+
+### 2. Carregar o Firmware no Arduino
+
+Abra o código do Arduino na Arduino IDE e carregue o programa na placa.
+
+### 3. Conectar o Controle
+
+Conecte o Arduino ao computador utilizando um cabo USB.
+
+### 4. Executar o Controlador Python
+
+Execute o seguinte comando no terminal:
+
+```bash
+python Controle_do_jogo.py
+```
+
+O script tentará identificar automaticamente a porta serial do Arduino.
+
+### 5. Iniciar o Jogo
+
+Abra o jogo no navegador e clique na tela para garantir que ela esteja selecionada. Em seguida, utilize o controle físico para jogar.
+
+Para encerrar o programa, pressione `CTRL + C` no terminal.
+
+## Contexto do Projeto
+
+**Evento:** Feira de Jogos do IFSC 2026  
+**Instituição:** Instituto Federal de Santa Catarina (IFSC)  
+**Projeto:** Deep Space Navigation
+
+O projeto foi desenvolvido e apresentado como parte de uma feira acadêmica de jogos, reunindo programação, eletrônica e desenvolvimento de experiências interativas.
+
+## Capturas de Tela
+
+### Menu Principal
+
+![Menu Principal](Assets/Screenshots/Menu.png)
+
+### Gameplay
+
+![Gameplay](Assets/Screenshots/Gameplay.png)
+
+### Foto
+
+![Foto](Assets/Screenshots/Photo.png)
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+Consulte o arquivo `LICENSE` para acessar o texto completo da licença.
